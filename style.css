@@ -1,0 +1,147 @@
+/* -- Art -- */
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+
+  --white-color: #fff;
+  --black-color: #22262b;
+  --body-color: hsl(240, 44%, 21%);
+  --container-color: #eaecee;
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  /* overflow: hidden; */
+}
+
+/* a {
+  text-decoration: none;
+} */
+
+label{
+    font-size: 14px;
+}
+
+/* =========== Box Container =========== */
+
+.container{
+  background-color: #fff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  width: 80vmin;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(2, 42, 83, 0.2);
+}
+
+/* --- Box Shadow Preview --- */
+
+.result{
+    padding: 20px 0 120px;
+}
+
+#preview{
+    background-color: var(--body-color);
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: auto;
+    border-radius: 70px;
+    box-shadow: -6px 15px 30px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Box Settings --- */
+
+.settings{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    gap: 15px 25px;
+}
+
+.range-wrapper, #color-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+input[type="range"]{
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type="checkbox"]{
+  cursor: pointer;
+}
+
+/* --- Copy Styles --- */
+
+.code-container{
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+.code-container button{
+  background-color: var(--body-color);
+  border-radius: 5px;
+  color: var(--white-color);
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+textarea{
+  resize: none;
+  padding: 15px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.input-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#color-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+input[type="color"]{
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
